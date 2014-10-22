@@ -2,14 +2,14 @@
 $startTime = microtime(true);
 $params = arguments($argv);
 if (empty($params['width']) || empty($params['height'])) {
-    echo "\nIncorrect result size params".PHP_EOL;exit;
+    echo PHP_EOL."Incorrect result size params".PHP_EOL;exit;
 }
 
 if (empty($params['originalDirectory'])) {
-    echo "\nIncorrect input params".PHP_EOL;exit;
+    echo PHP_EOL."Incorrect input params".PHP_EOL;exit;
 }
 if (!$params['originalDirectory']) {
-    echo "\nDirectory does not exist".PHP_EOL;exit;
+    echo PHP_EOL."Directory does not exist".PHP_EOL;exit;
 }
 
 $resultDirectory = $params['originalDirectory'].'/resize-'.$params['width'].'x'.$params['height'];
